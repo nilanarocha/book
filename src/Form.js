@@ -12,16 +12,16 @@ class Form extends Component {
     this.state = this.stateInital;
   }
 
+  submitForm = () => {
+    this.props.listenerOfSubmit(this.state);
+    this.setState(this.stateInital);
+  };
+
   listenerOfInput = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
-  };
-
-  submitForm = () => {
-    this.props.listenerOfSubmit(this.state);
-    this.setState(this.stateInital);
   };
 
   render() {
