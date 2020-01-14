@@ -39,11 +39,15 @@ class App extends Component {
     });
   };
 
+  listenerOfSubmit = author => {
+    this.setState({ authors: [...this.state.authors, author] });
+  };
+
   render() {
     return (
       <Fragment>
         <Tabela authors={this.state.authors} deleteAuthor={this.deleteAuthor} />
-        <Form />
+        <Form listenerOfSubmit={this.listenerOfSubmit} />
       </Fragment>
     );
   }
