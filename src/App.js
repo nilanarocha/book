@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
-import Tabela from './Tabela';
 
+import Header from './Header';
+import Tabela from './Tabela';
 import Form from './Form';
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+        <Header />
         <Tabela authors={this.state.authors} deleteAuthor={this.deleteAuthor} />
         <Form listenerOfSubmit={this.listenerOfSubmit} />
       </Fragment>
