@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import FormValidator from './FormValidator';
 
 class Form extends Component {
   constructor(props) {
     super(props);
+
+    this.validator = new FormValidator({
+      camp: 'name',
+      method: 'isEmpty'
+    });
+
     this.stateInital = {
       name: '',
       book: '',
@@ -13,8 +20,12 @@ class Form extends Component {
   }
 
   submitForm = () => {
-    this.props.listenerOfSubmit(this.state);
-    this.setState(this.stateInital);
+    if (this.validator.validate(this.state)) {
+      this.props.listenerOfSubmit(this.state);
+      this.setState(this.stateInital);
+    } else {
+      console.log('bloked');
+    }
   };
 
   listenerOfInput = event => {

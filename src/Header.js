@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 const Header = () => {
   return (
     <nav>
-      <div class="nav-wrapper blue-grey">
-        <a href="#" class="brand-logo">
+      <div className="nav-wrapper blue-grey">
+        <a href="#" className="brand-logo">
           Code-Book
         </a>
-        <ul class="right">
+        <ul className="right">
           <li>
             <a href="/authors">Authors</a>
           </li>

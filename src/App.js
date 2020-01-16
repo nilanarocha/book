@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <div className="container mb-10">
+        <div className="container mb-10 table">
           <Tabela
             authors={this.state.authors}
             deleteAuthor={this.deleteAuthor}
