@@ -3,19 +3,19 @@ import React, { Component } from 'react';
 const Header = () => {
   return (
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper blue-grey">
         <a href="#" class="brand-logo">
-          Logo
+          Code-Book
         </a>
         <ul class="right">
           <li>
-            <a href="#">Sass</a>
+            <a href="/authors">Authors</a>
           </li>
           <li>
-            <a href="#">Components</a>
+            <a href="/books">Books</a>
           </li>
           <li>
-            <a href="#">JavaScript</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>

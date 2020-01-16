@@ -48,8 +48,13 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <Tabela authors={this.state.authors} deleteAuthor={this.deleteAuthor} />
-        <Form listenerOfSubmit={this.listenerOfSubmit} />
+        <div className="container mb-10">
+          <Tabela
+            authors={this.state.authors}
+            deleteAuthor={this.deleteAuthor}
+          />
+          <Form listenerOfSubmit={this.listenerOfSubmit} />
+        </div>
       </Fragment>
     );
   }
